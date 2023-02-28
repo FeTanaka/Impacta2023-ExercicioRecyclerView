@@ -13,10 +13,7 @@ class Adaptador(private val lista: ArrayList<Evento>): RecyclerView.Adapter<Adap
     inner class PontoFixacao(val binding: RecyclerViewItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(evento: Evento) {
-            binding.tituloTextview.text = evento.titulo
-            binding.descricaoTextview.text = evento.descricao
-            binding.dataTextview.text = evento.data.toString()
-            binding.diaMesTextview.text = "${evento.data.dayOfMonth}\n${evento.data.month.toString()}"
+            binding.variavel = evento
         }
     }
 
